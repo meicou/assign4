@@ -299,7 +299,7 @@ void checkShipHit() {
     Laser laser = lList[i];
     if (laser!= null && !laser.gone // Check Array isn't empty and laser still exist
         && lList[i].lX >= ship.posX && lList[i].lX + lList[i].lSize <= ship.posX + ship.shipSize 
-        && lList[i].lY+lList[i].lSize >= ship.posY ) {
+        && lList[i].lY+lList[i].lSize >= ship.posY && lList[i].lY <= ship.posY +ship.shipSize/4*6.6 ) {
         removeLaser(lList[i]);
           life-=1;        
     }
@@ -428,7 +428,7 @@ void statusCtrl() {
       break;
 
       /*-----------add things here--------*/
-    case GAME_PAUSE:
+/*    case GAME_PAUSE:
       status = GAME_PLAYING;
       break;
       
@@ -439,7 +439,7 @@ void statusCtrl() {
     case GAME_LOSE:
       status = GAME_PLAYING;
       break;
-    }
+  */  }
   }
 }
 
