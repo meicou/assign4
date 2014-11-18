@@ -154,8 +154,8 @@ void alienMaker() {
   aList[0]= new Alien(50, 50);
    for (int i=0; i < 53; ++i){
     
-    int row = i / 12;
-    int col = i % 12;
+    int row = int (i / 12);
+    int col = int (i % 12);
  
     int x = 50 + (40*col);
     int y = 50 + (50*row);
